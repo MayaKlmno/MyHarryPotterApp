@@ -9,57 +9,49 @@
     tools:context=".HogwartsHouseListActivity">
 
     <TextView
-        android:id="@+id/Hogwarts House!"
+        android:id="@+id/textView_main_house"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="30dp"
         android:fontFamily="@font/aclonica"
         android:text="Hogwarts House!"
         android:textSize="24sp"
-        app:layout_constraintBottom_toTopOf="@+id/button"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintEnd_toStartOf="@+id/imageView4"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.721" />
+        app:layout_constraintTop_toTopOf="@+id/guideline" />
 
     <Button
-        android:id="@+id/button"
+        android:id="@+id/button_main_yourHouse"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Your House!"
+        app:layout_constraintBottom_toTopOf="@+id/guideline2"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.54"
+        app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
-        tools:layout_editor_absoluteY="413dp" />
+        app:layout_constraintTop_toTopOf="@+id/guideline5" />
 
     <TextView
-        android:id="@+id/textView"
+        android:id="@+id/textView_main_intro"
         android:layout_width="367dp"
         android:layout_height="71dp"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="16dp"
-        android:layout_marginEnd="16dp"
-        android:layout_marginBottom="30dp"
         android:fontFamily="@font/rosarivo"
         android:text="Do you know what your Hogwarts House is? Click below to generate everything you need to know about your hogwarts house!"
-        app:layout_constraintBottom_toTopOf="@+id/button"
+        app:layout_constraintBottom_toTopOf="@+id/guideline4"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/Hogwarts House!" />
+        app:layout_constraintTop_toTopOf="@+id/guideline3" />
 
     <ImageView
-        android:id="@+id/imageView4"
+        android:id="@+id/imageView_main_hat"
         android:layout_width="111dp"
         android:layout_height="108dp"
-        android:layout_marginEnd="20dp"
-        android:layout_marginBottom="30dp"
-        app:layout_constraintBottom_toTopOf="@+id/Hogwarts House!"
+        android:layout_marginEnd="24dp"
+        app:layout_constraintBottom_toTopOf="@+id/guideline"
         app:layout_constraintEnd_toEndOf="parent"
         app:srcCompat="@drawable/sortinghat" />
 
     <ImageView
-        android:id="@+id/imageView7"
+        android:id="@+id/imageView_main_gryffendor"
         android:layout_width="115dp"
         android:layout_height="127dp"
         app:layout_constraintStart_toStartOf="parent"
@@ -67,7 +59,7 @@
         app:srcCompat="@drawable/gryffindor" />
 
     <ImageView
-        android:id="@+id/imageView8"
+        android:id="@+id/imageView_main_slytherin"
         android:layout_width="103dp"
         android:layout_height="108dp"
         app:layout_constraintEnd_toEndOf="parent"
@@ -75,7 +67,7 @@
         app:srcCompat="@drawable/slytherin" />
 
     <ImageView
-        android:id="@+id/imageView9"
+        android:id="@+id/imageView_main_ravenclaw"
         android:layout_width="99dp"
         android:layout_height="113dp"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -83,11 +75,51 @@
         app:srcCompat="@drawable/ravenclaw" />
 
     <ImageView
-        android:id="@+id/imageView10"
+        android:id="@+id/imageView_main_hufflepuff"
         android:layout_width="106dp"
         android:layout_height="103dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:srcCompat="@drawable/huffelpuff" />
+
+    <androidx.constraintlayout.widget.Barrier
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:barrierDirection="top" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_begin="248dp" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_begin="480dp" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_begin="304dp" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_begin="387dp" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_begin="407dp" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
