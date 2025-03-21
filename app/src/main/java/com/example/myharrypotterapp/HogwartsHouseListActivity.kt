@@ -6,12 +6,16 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
 import com.example.myharrypotterapp.databinding.HogwartsHouseListBinding
+import retrofit2.Call
+import retrofit2.Callback
+import retrofit2.Response
 
 class HogwartsHouseListActivity : AppCompatActivity() {
     // here you should set up the binding and the adaptor
     //TODO: make the adaptor and then write the private lateninit here
     //private lateinit var binding: ActivityMainBinding
     private lateinit var binding: HogwartsHouseListBinding
+    private lateinit var adapter: HogwartsHouseAdapter
 
     companion object{
         val TAG = "MainActivity"
@@ -28,16 +32,16 @@ class HogwartsHouseListActivity : AppCompatActivity() {
             insets
         }
 
-        val sortingHatService = RetrofitHelper.getInstance().create(sortingHatService::class.java)
-        val sortingHatCall = sortingHatService.getAllDaySortingHatData()
+        val hogwartsHouseService = RetrofitHelper.getInstance().create(HogwartsHouseService::class.java)
+        val hogwartsHouseCall = hogwartsHouseService.getHogwartsHouseData())
 
-        sortingHatCall.enqueue(object: Callback<FeatureCollection> {
+        hogwartsHouseCall.enqueue(object: Callback<FeatureCollection> {
             override fun onResponse(call: Call<FeatureCollection>, response: Response<FeatureCollection>){
                 // TODO: this is where the code goes for when you get your data
                 // create your recyclerView adapeter HERE
                 response.body()
-                val sortingHat = response.body()!!
-                //adapter = SortingHatAdapter(sortingHat.)
+                val hogwartsHouse = response.body()!!
+                //adapter = HogwartsHouseAdapter(hogwartsHouse.)
             }
         })
     }

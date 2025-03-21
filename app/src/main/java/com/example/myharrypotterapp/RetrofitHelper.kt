@@ -4,7 +4,7 @@ import retrofit2.Retrofit
 import retrofit2.converter.gson.GsonConverterFactory
 
 object RetrofitHelper {
-    val baseUrl = "https://wizard-world-api.herokuapp.com/Houses"
+    val baseUrl = "https://wizard-world-api.herokuapp.com/"
 
     fun getInstance() : Retrofit {
         return Retrofit.Builder()
