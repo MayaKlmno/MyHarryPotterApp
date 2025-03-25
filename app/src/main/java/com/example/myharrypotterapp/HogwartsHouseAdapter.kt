@@ -1,12 +1,13 @@
 package com.example.myharrypotterapp
 
+import android.content.Intent
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.Button
 import androidx.recyclerview.widget.RecyclerView
 
-class HogwartsHouseAdapter (var hogwartsHouseList: List<FeatureCollection>) :
+class HogwartsHouseAdapter (var hogwartsHouseList: List<House>) :
     RecyclerView.Adapter<HogwartsHouseAdapter.ViewHolder>() {
     // have to put something inside the list<>
 
@@ -45,8 +46,19 @@ class HogwartsHouseAdapter (var hogwartsHouseList: List<FeatureCollection>) :
     }
 
 
+    //TODO: FIX these errors
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
+        Button.buttonGryffendor.text = "Gryffendor"
+        Button.buttonSlytherin.text = "Slytherin"
+        Button.buttonHufflepuff.text = "Hufflepuff"
+        Button.buttonRavenclaw.text = "Ravenclaw"
 
+
+        Button.button.setOnClickListener {
+            val detailIntent = Intent(context, YourHogwartsHouse::class.java)
+            detailIntent.putExtra(YourHogwartsHouse.EXTEA_FEATURE, House)
+            context.startActivity(detailIntent)
+        }
     }
 
 }

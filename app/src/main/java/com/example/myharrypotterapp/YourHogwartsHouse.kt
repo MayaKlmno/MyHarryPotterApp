@@ -2,8 +2,6 @@ package com.example.myharrypotterapp
 
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
-import androidx.appcompat.content.res.AppCompatResources
-import com.example.myharrypotterapp.databinding.HogwartsHouseListBinding
 import com.example.myharrypotterapp.databinding.YourHogwartsHouseBinding
 
 class YourHogwartsHouse: AppCompatActivity() {
@@ -20,10 +18,14 @@ class YourHogwartsHouse: AppCompatActivity() {
         binding = YourHogwartsHouseBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
-        val house = intent.getParcelableExtra<HogwartsHouseAdapter>(EXTRA_HOUSE)
+        val house = intent.getParcelableExtra<House>(EXTRA_HOUSE)
 
-        //TODO: make an image that corresponds with the house (maybe)
-        //var imageid
+        binding.textViewYourHouseHouse.text =  house?.name
+        binding.textViewYourHouseGhost.text = house?.ghost
+        binding.textViewYourHouseHeads.text  = house?.heads.toString()
+        binding.textViewYourHouseAnimal.text = house?.animal
+        binding.textViewYourHouseColors.text = house?.houseColors
+        binding.textViewYourHouseTraits.text = house?.traits.toString()
 
     }
 }

@@ -1,5 +1,6 @@
 package com.example.myharrypotterapp
 
-data class traits (
+//TODO: Parcelize this
+data class Trait (
     var name: String
 )

@@ -35,8 +35,8 @@ class HogwartsHouseListActivity : AppCompatActivity() {
         val hogwartsHouseService = RetrofitHelper.getInstance().create(HogwartsHouseService::class.java)
         val hogwartsHouseCall = hogwartsHouseService.getHogwartsHouseData())
 
-        hogwartsHouseCall.enqueue(object: Callback<FeatureCollection> {
-            override fun onResponse(call: Call<FeatureCollection>, response: Response<FeatureCollection>){
+        hogwartsHouseCall.enqueue(object: Callback<House> {
+            override fun onResponse(call: Call<House>, response: Response<House>){
                 // TODO: this is where the code goes for when you get your data
                 // create your recyclerView adapeter HERE
                 response.body()
@@ -44,7 +44,7 @@ class HogwartsHouseListActivity : AppCompatActivity() {
                 //adapter = HogwartsHouseAdapter(hogwartsHouse.)
             }
 
-            override fun onFailure(p0: Call<FeatureCollection>, p1: Throwable) {
+            override fun onFailure(p0: Call<House>, p1: Throwable) {
                 TODO("Not yet implemented")
             }
         })

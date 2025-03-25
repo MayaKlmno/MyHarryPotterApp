@@ -1,7 +1,8 @@
 package com.example.myharrypotterapp
 
-// TODO: Should have the @Parcelize
-data class FeatureCollection (
+
+// TODO: Parcelize this
+data class House (
     var name: String,
     var houseColors: String,
     var founder: String,
@@ -9,6 +10,6 @@ data class FeatureCollection (
     var element: String,
     var ghost: String,
     var commonRoom: String,
-    var heads: List<heads>,
-    var traits: List<traits>
+    var heads: List<Head>,
+    var traits: List<Trait>
 )
