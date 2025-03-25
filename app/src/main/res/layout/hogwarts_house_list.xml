@@ -105,7 +105,7 @@
         app:layout_constraintGuide_begin="407dp" />
 
     <Button
-        android:id="@+id/button_main_griffindor"
+        android:id="@+id/button_main_gryffendor"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="60dp"

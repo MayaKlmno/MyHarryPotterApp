@@ -43,6 +43,10 @@ class HogwartsHouseListActivity : AppCompatActivity() {
                 val hogwartsHouse = response.body()!!
                 //adapter = HogwartsHouseAdapter(hogwartsHouse.)
             }
+
+            override fun onFailure(p0: Call<FeatureCollection>, p1: Throwable) {
+                TODO("Not yet implemented")
+            }
         })
     }
 }
