@@ -43,6 +43,8 @@ class HogwartsHouseListActivity : AppCompatActivity() {
                 val hogwartsHouse = response.body()!!
 
                 binding.buttonMainRavenclaw.setOnClickListener{
+                    //Houses.filter{it.Houses != "Ravenclaw"}
+
 
                 }
                 binding.buttonMainSlytherin.setOnClickListener{

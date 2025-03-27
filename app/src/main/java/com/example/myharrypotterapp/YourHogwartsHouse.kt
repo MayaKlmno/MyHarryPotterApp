@@ -6,8 +6,8 @@ import com.example.myharrypotterapp.databinding.YourHogwartsHouseBinding
 
 class YourHogwartsHouse: AppCompatActivity() {
     companion object{
-        val EXTRA_HOUSE: "House";
-        val TAG = "YourHogwartsHouse"
+        val TAG: "Houses"
+       // val TAG = "YourHogwartsHouse"
     }
 
     private lateinit var binding: YourHogwartsHouseBinding
@@ -18,7 +18,7 @@ class YourHogwartsHouse: AppCompatActivity() {
         binding = YourHogwartsHouseBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
-        val house = intent.getParcelableExtra<House>(EXTRA_HOUSE)
+        val house = intent.getParcelableExtra<House>(TAG)
 
         binding.textViewYourHouseHouse.text =  house?.name
         binding.textViewYourHouseGhost.text = house?.ghost
