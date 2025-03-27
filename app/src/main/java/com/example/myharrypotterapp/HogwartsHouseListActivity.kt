@@ -15,7 +15,7 @@ class HogwartsHouseListActivity : AppCompatActivity() {
     //TODO: make the adaptor and then write the private lateninit here
     //private lateinit var binding: ActivityMainBinding
     private lateinit var binding: HogwartsHouseListBinding
-    private lateinit var adapter: HogwartsHouseAdapter
+    //private lateinit var adapter: HogwartsHouseAdapter
 
     companion object{
         val TAG = "MainActivity"
@@ -32,16 +32,29 @@ class HogwartsHouseListActivity : AppCompatActivity() {
             insets
         }
 
+
         val hogwartsHouseService = RetrofitHelper.getInstance().create(HogwartsHouseService::class.java)
         val hogwartsHouseCall = hogwartsHouseService.getHogwartsHouseData())
 
         hogwartsHouseCall.enqueue(object: Callback<House> {
             override fun onResponse(call: Call<House>, response: Response<House>){
                 // TODO: this is where the code goes for when you get your data
-                // create your recyclerView adapeter HERE
                 response.body()
                 val hogwartsHouse = response.body()!!
-                //adapter = HogwartsHouseAdapter(hogwartsHouse.)
+
+                binding.buttonMainRavenclaw.setOnClickListener{
+
+                }
+                binding.buttonMainSlytherin.setOnClickListener{
+
+                }
+                binding.buttonMainGryffendor.setOnClickListener{
+
+                }
+                binding.buttonMainHufflepuff.setOnClickListener{
+
+                }
+
             }
 
             override fun onFailure(p0: Call<House>, p1: Throwable) {

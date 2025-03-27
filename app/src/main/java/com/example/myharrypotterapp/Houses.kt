@@ -3,8 +3,8 @@ package com.example.myharrypotterapp
 import android.os.Parcelable
 import kotlinx.parcelize.Parcelize
 
-//TODO: Parcelize this
+// should Parcelize this
 @Parcelize
-data class Trait (
-    var name: String
+data class Houses (
+    var house: List<House>
 ) : Parcelable

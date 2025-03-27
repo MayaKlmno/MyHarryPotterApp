@@ -1,4 +1,4 @@
-package com.example.myharrypotterapp
+/*package com.example.myharrypotterapp
 
 import android.content.Intent
 import android.view.LayoutInflater
@@ -6,6 +6,7 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.Button
 import androidx.recyclerview.widget.RecyclerView
+import kotlin.coroutines.jvm.internal.CompletedContinuation.context
 
 class HogwartsHouseAdapter (var hogwartsHouseList: List<House>) :
     RecyclerView.Adapter<HogwartsHouseAdapter.ViewHolder>() {
@@ -14,10 +15,10 @@ class HogwartsHouseAdapter (var hogwartsHouseList: List<House>) :
 
         class ViewHolder(view: View) : RecyclerView.ViewHolder(view){
             //TODO: put all of the widgets here
-            val buttonGryffedor: Button
-            val buttonSlytherin: Button
-            val buttonRavenclaw: Button
-            val buttonHufflepuff: Button
+            var buttonGryffedor: Button
+            var buttonSlytherin: Button
+            var buttonRavenclaw: Button
+            var buttonHufflepuff: Button
                 // I think that these are only one ones which change, or the ones
                 // that something happens to when you click on them
             //ex:
@@ -48,17 +49,19 @@ class HogwartsHouseAdapter (var hogwartsHouseList: List<House>) :
 
     //TODO: FIX these errors
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
-        Button.buttonGryffendor.text = "Gryffendor"
-        Button.buttonSlytherin.text = "Slytherin"
-        Button.buttonHufflepuff.text = "Hufflepuff"
-        Button.buttonRavenclaw.text = "Ravenclaw"
+        holder.buttonGryffedor.text = "Gryffindor"
+        holder.buttonSlytherin.text = "Slytherin"
+        holder.buttonHufflepuff.text = "Hufflepuff"
+        holder.buttonRavenclaw.text = "Ravenclaw"
 
 
         Button.button.setOnClickListener {
-            val detailIntent = Intent(context, YourHogwartsHouse::class.java)
+            val detailIntent = Intent(context!, YourHogwartsHouse::class.java)
             detailIntent.putExtra(YourHogwartsHouse.EXTEA_FEATURE, House)
             context.startActivity(detailIntent)
         }
     }
 
 }
+
+ */
