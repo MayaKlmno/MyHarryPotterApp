@@ -35,7 +35,7 @@ class HogwartsHouseListActivity : AppCompatActivity() {
 
 
         val hogwartsHouseService = RetrofitHelper.getInstance().create(HogwartsHouseService::class.java)
-        val hogwartsHouseCall = hogwartsHouseService.getHogwartsHouseData())
+        val hogwartsHouseCall = hogwartsHouseService.getHogwartsHouseData()
 
         // update service to give back a List<house>
         // update the enqueue to have Call<List<House>
