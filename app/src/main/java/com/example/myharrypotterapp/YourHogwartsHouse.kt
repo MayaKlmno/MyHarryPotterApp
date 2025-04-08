@@ -26,7 +26,7 @@ class YourHogwartsHouse: AppCompatActivity() {
         binding.textViewYourHouseGhost.text = house?.ghost
         binding.textViewYourHouseHeads.text  = house?.heads.toString()
         binding.textViewYourHouseAnimal.text = house?.animal
-        binding.textViewYourHouseColors.text = house?.houseColors
+        binding.textViewYourHouseColors.text = house?.houseColours
         binding.textViewYourHouseTraits.text = house?.traits.toString()
 
     }

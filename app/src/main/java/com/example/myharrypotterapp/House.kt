@@ -8,7 +8,7 @@ import kotlinx.parcelize.Parcelize
 @Parcelize
 data class House (
     var name: String,
-    var houseColors: String,
+    var houseColours: String,
     var founder: String,
     var animal: String,
     var element: String,

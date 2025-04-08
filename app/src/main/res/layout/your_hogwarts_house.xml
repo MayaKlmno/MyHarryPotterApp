@@ -5,7 +5,7 @@
     android:id="@+id/background"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#5E668F">
+    android:background="#A6B2F1">
 
     <TextView
         android:id="@+id/textView_yourhouse"
@@ -24,6 +24,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="20dp"
+        android:fontFamily="@font/bakbak_one"
         android:text="These are your house colors"
         android:textSize="16sp"
         app:layout_constraintEnd_toStartOf="@+id/guideline6"
@@ -32,7 +33,7 @@
 
     <TextView
         android:id="@+id/textView_yourHouse_colors"
-        android:layout_width="wrap_content"
+        android:layout_width="100dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="15dp"
         android:text="TextView"
@@ -45,6 +46,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="20dp"
+        android:fontFamily="@font/bakbak_one"
         android:text="This is your founder:"
         android:textSize="16sp"
         app:layout_constraintEnd_toEndOf="parent"
@@ -53,7 +55,7 @@
 
     <TextView
         android:id="@+id/textView_yourHouse_founder"
-        android:layout_width="wrap_content"
+        android:layout_width="100dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="15dp"
         android:text="TextView"
@@ -66,6 +68,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="20dp"
+        android:fontFamily="@font/bakbak_one"
         android:text="This is your house animal:"
         android:textSize="16sp"
         app:layout_constraintEnd_toStartOf="@+id/guideline6"
@@ -74,7 +77,7 @@
 
     <TextView
         android:id="@+id/textView_yourHouse_animal"
-        android:layout_width="wrap_content"
+        android:layout_width="100dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="15dp"
         android:text="TextView"
@@ -87,6 +90,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="20dp"
+        android:fontFamily="@font/bakbak_one"
         android:text="House element:"
         android:textSize="16sp"
         app:layout_constraintEnd_toEndOf="parent"
@@ -95,7 +99,7 @@
 
     <TextView
         android:id="@+id/textView_yourHouse_element"
-        android:layout_width="wrap_content"
+        android:layout_width="100dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="15dp"
         android:text="TextView"
@@ -108,6 +112,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="20dp"
+        android:fontFamily="@font/bakbak_one"
         android:text="Your house ghost:"
         android:textSize="16sp"
         app:layout_constraintEnd_toStartOf="@+id/guideline6"
@@ -116,7 +121,7 @@
 
     <TextView
         android:id="@+id/textView_yourHouse_ghost"
-        android:layout_width="wrap_content"
+        android:layout_width="100dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="15dp"
         android:text="TextView"
@@ -129,6 +134,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="20dp"
+        android:fontFamily="@font/bakbak_one"
         android:text="Your House Heads:"
         android:textSize="16sp"
         app:layout_constraintEnd_toEndOf="parent"
@@ -137,7 +143,7 @@
 
     <TextView
         android:id="@+id/textView_yourHouse_heads"
-        android:layout_width="wrap_content"
+        android:layout_width="100dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="15dp"
         android:text="TextView"
@@ -150,6 +156,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="20dp"
+        android:fontFamily="@font/bakbak_one"
         android:text="Your traits:"
         android:textSize="16sp"
         app:layout_constraintEnd_toEndOf="parent"
@@ -158,7 +165,7 @@
 
     <TextView
         android:id="@+id/textView_yourHouse_traits"
-        android:layout_width="wrap_content"
+        android:layout_width="150dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="15dp"
         android:text="TextView"

@@ -2,6 +2,7 @@ package com.example.myharrypotterapp
 
 import android.content.Intent
 import android.os.Bundle
+import android.util.Log
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
@@ -44,11 +45,14 @@ class HogwartsHouseListActivity : AppCompatActivity() {
             override fun onResponse(call: Call<List<House>>, response: Response<List<House>>){
                 // TODO: this is where the code goes for when you get your data
                 var hogwartsHouses = response.body()!!
+                Log.d(TAG, "onResponse: $hogwartsHouses")
 
                 binding.buttonMainRavenclaw.setOnClickListener{
 
                     // filter keeps things that match the condition
                     hogwartsHouses =  hogwartsHouses.filter{it.name == "Ravenclaw"}
+                    Log.d(TAG, "onResponse: $hogwartsHouses")
+
                     // should have a list with one item in it
                     // make the intent to go to the detail ativity
                     val detailIntent = Intent(this@HogwartsHouseListActivity, YourHogwartsHouse::class.java)
@@ -60,18 +64,24 @@ class HogwartsHouseListActivity : AppCompatActivity() {
                 }
                 binding.buttonMainSlytherin.setOnClickListener{
                     hogwartsHouses = hogwartsHouses.filter { it.name == "Slytherin" }
+                    Log.d(TAG, "onResponse: $hogwartsHouses")
+
                     val detailIntent = Intent(this@HogwartsHouseListActivity, YourHogwartsHouse::class.java)
                     detailIntent.putExtra(YourHogwartsHouse.TAG, hogwartsHouses[0])
                     startActivity(detailIntent)
                 }
                 binding.buttonMainGryffendor.setOnClickListener{
-                    hogwartsHouses = hogwartsHouses.filter {it.name == "Gryffendor"}
+                    hogwartsHouses = hogwartsHouses.filter {it.name == "Gryffindor"}
+                    Log.d(TAG, "onResponse: $hogwartsHouses")
+
                     val detailIntent = Intent(this@HogwartsHouseListActivity, YourHogwartsHouse::class.java)
                     detailIntent.putExtra(YourHogwartsHouse.TAG, hogwartsHouses[0])
                     startActivity(detailIntent)
                 }
                 binding.buttonMainHufflepuff.setOnClickListener{
                     hogwartsHouses =  hogwartsHouses.filter{it.name == "Hufflepuff"}
+                    Log.d(TAG, "onResponse: $hogwartsHouses")
+
                     var detailIntent = Intent(this@HogwartsHouseListActivity, YourHogwartsHouse::class.java)
                     detailIntent.putExtra(YourHogwartsHouse.TAG, hogwartsHouses[0])
                     startActivity(detailIntent)
