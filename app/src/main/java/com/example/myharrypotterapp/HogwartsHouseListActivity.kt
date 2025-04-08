@@ -1,5 +1,6 @@
 package com.example.myharrypotterapp
 
+import android.content.Intent
 import android.os.Bundle
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
@@ -36,30 +37,49 @@ class HogwartsHouseListActivity : AppCompatActivity() {
         val hogwartsHouseService = RetrofitHelper.getInstance().create(HogwartsHouseService::class.java)
         val hogwartsHouseCall = hogwartsHouseService.getHogwartsHouseData())
 
-        hogwartsHouseCall.enqueue(object: Callback<House> {
-            override fun onResponse(call: Call<House>, response: Response<House>){
+        // update service to give back a List<house>
+        // update the enqueue to have Call<List<House>
+
+        hogwartsHouseCall.enqueue(object: Callback<List<House>> {
+            override fun onResponse(call: Call<List<House>>, response: Response<List<House>>){
                 // TODO: this is where the code goes for when you get your data
-                response.body()
-                val hogwartsHouse = response.body()!!
+                var hogwartsHouses = response.body()!!
 
                 binding.buttonMainRavenclaw.setOnClickListener{
-                    //Houses.filter{it.Houses != "Ravenclaw"}
+
+                    // filter keeps things that match the condition
+                    hogwartsHouses =  hogwartsHouses.filter{it.name == "Ravenclaw"}
+                    // should have a list with one item in it
+                    // make the intent to go to the detail ativity
+                    val detailIntent = Intent(this@HogwartsHouseListActivity, YourHogwartsHouse::class.java)
+                    detailIntent.putExtra(YourHogwartsHouse.TAG, hogwartsHouses[0])
+                    // pass an extra with the first item in hte list
+                    startActivity(detailIntent)
 
 
                 }
                 binding.buttonMainSlytherin.setOnClickListener{
-
+                    hogwartsHouses = hogwartsHouses.filter { it.name == "Slytherin" }
+                    val detailIntent = Intent(this@HogwartsHouseListActivity, YourHogwartsHouse::class.java)
+                    detailIntent.putExtra(YourHogwartsHouse.TAG, hogwartsHouses[0])
+                    startActivity(detailIntent)
                 }
                 binding.buttonMainGryffendor.setOnClickListener{
-
+                    hogwartsHouses = hogwartsHouses.filter {it.name == "Gryffendor"}
+                    val detailIntent = Intent(this@HogwartsHouseListActivity, YourHogwartsHouse::class.java)
+                    detailIntent.putExtra(YourHogwartsHouse.TAG, hogwartsHouses[0])
+                    startActivity(detailIntent)
                 }
                 binding.buttonMainHufflepuff.setOnClickListener{
-
+                    hogwartsHouses =  hogwartsHouses.filter{it.name == "Hufflepuff"}
+                    var detailIntent = Intent(this@HogwartsHouseListActivity, YourHogwartsHouse::class.java)
+                    detailIntent.putExtra(YourHogwartsHouse.TAG, hogwartsHouses[0])
+                    startActivity(detailIntent)
                 }
 
             }
 
-            override fun onFailure(p0: Call<House>, p1: Throwable) {
+            override fun onFailure(p0: Call<List<House>>, p1: Throwable) {
                 TODO("Not yet implemented")
             }
         })

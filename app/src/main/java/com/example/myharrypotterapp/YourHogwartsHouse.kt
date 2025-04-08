@@ -5,12 +5,14 @@ import androidx.appcompat.app.AppCompatActivity
 import com.example.myharrypotterapp.databinding.YourHogwartsHouseBinding
 
 class YourHogwartsHouse: AppCompatActivity() {
+    private lateinit var binding: YourHogwartsHouseBinding
+
     companion object{
-        val TAG: "Houses"
+        val TAG = "Houses"
        // val TAG = "YourHogwartsHouse"
     }
 
-    private lateinit var binding: YourHogwartsHouseBinding
+
 
     override fun onCreate(savedInstanceState: Bundle?){
         super.onCreate(savedInstanceState)
