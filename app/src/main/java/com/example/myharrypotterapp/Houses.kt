@@ -7,5 +7,4 @@ import kotlinx.parcelize.Parcelize
 @Parcelize
 data class Houses (
     var house: List<House>
-) : Parcelable {
-}
+) : Parcelable

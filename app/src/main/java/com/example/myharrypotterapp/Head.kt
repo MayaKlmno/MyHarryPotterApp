@@ -8,4 +8,8 @@ import kotlinx.parcelize.Parcelize
 data class Head (
     var firstName: String,
     var lastName: String
-) : Parcelable
+) : Parcelable {
+    override fun toString(): String {
+        return "$firstName $lastName"
+    }
+}

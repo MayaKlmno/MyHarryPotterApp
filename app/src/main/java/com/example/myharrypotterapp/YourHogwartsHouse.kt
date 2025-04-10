@@ -24,10 +24,10 @@ class YourHogwartsHouse: AppCompatActivity() {
 
         binding.textViewYourHouseHouse.text =  house?.name
         binding.textViewYourHouseGhost.text = house?.ghost
-        binding.textViewYourHouseHeads.text  = house?.heads.toString()
+        binding.textViewYourHouseHeads.text  = house?.heads?.joinToString { "$it\n" }
         binding.textViewYourHouseAnimal.text = house?.animal
         binding.textViewYourHouseColors.text = house?.houseColours
-        binding.textViewYourHouseTraits.text = house?.traits.toString()
+        binding.textViewYourHouseTraits.text = house?.traits?.joinToString { "$it\n" }
         binding.textViewYourHouseFounder.text = house?.founder
         binding.textViewYourHouseElement.text = house?.element
 
