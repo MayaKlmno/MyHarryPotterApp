@@ -5,8 +5,10 @@ import android.os.Bundle
 import android.util.Log
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
+import androidx.core.content.ContextCompat.startActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
+import com.example.myharrypotterapp.HogwartsHouseListActivity.Companion.TAG
 import com.example.myharrypotterapp.databinding.HogwartsHouseListBinding
 import retrofit2.Call
 import retrofit2.Callback
@@ -25,6 +27,11 @@ class HogwartsHouseListActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+
+    }
+
+    override fun onStart() {
+        super.onStart()
         enableEdgeToEdge()
         binding = HogwartsHouseListBinding.inflate(layoutInflater)
         setContentView(binding.root)
@@ -94,6 +101,5 @@ class HogwartsHouseListActivity : AppCompatActivity() {
             }
         })
     }
-
 
 }
