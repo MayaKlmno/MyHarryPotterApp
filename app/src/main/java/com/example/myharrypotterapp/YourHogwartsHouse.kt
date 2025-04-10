@@ -28,6 +28,8 @@ class YourHogwartsHouse: AppCompatActivity() {
         binding.textViewYourHouseAnimal.text = house?.animal
         binding.textViewYourHouseColors.text = house?.houseColours
         binding.textViewYourHouseTraits.text = house?.traits.toString()
+        binding.textViewYourHouseFounder.text = house?.founder
+        binding.textViewYourHouseElement.text = house?.element
 
     }
 }

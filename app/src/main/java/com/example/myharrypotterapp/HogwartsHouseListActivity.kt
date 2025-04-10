@@ -94,4 +94,6 @@ class HogwartsHouseListActivity : AppCompatActivity() {
             }
         })
     }
+
+
 }

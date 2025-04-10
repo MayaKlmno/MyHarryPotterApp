@@ -27,6 +27,7 @@
         android:text="Do you know what your Hogwarts House is? Click below to generate everything you need to know about your hogwarts house!"
         app:layout_constraintBottom_toTopOf="@+id/guideline4"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.477"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="@+id/guideline3" />
 
