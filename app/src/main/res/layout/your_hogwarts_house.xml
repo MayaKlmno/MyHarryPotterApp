@@ -5,7 +5,7 @@
     android:id="@+id/background"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#A6B2F1">
+    android:background="#43BE67CC">
 
     <TextView
         android:id="@+id/textView_yourhouse"
